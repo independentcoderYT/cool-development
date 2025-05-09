@@ -1,0 +1,76 @@
+/* style.css - Electric Pulse Border */
+body {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.animated-border-box {
+    position: relative;
+    padding: 30px;
+    background: rgba(10, 10, 10, 0.95);
+    border-radius: 8px;
+    isolation: isolate;
+}
+
+/* Electric Pulse Border Effect */
+.animated-border-box::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    border-radius: 10px;
+    background: linear-gradient(
+        45deg,
+        #f00 0%, #0f0 25%, 
+        #00f 50%, #f0f 75%, 
+        #f00 100%
+    );
+    background-size: 400% 400%;
+    animation: electric-pulse 3s linear infinite;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 2px;
+    filter: brightness(1.2);
+}
+
+.animated-border-box::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    z-index: -2;
+    border-radius: 12px;
+    background: inherit;
+    filter: blur(8px) brightness(1.5);
+    opacity: 0.7;
+}
+
+.box-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.box-description {
+    color: #bbb;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@keyframes electric-pulse {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 400% 400%; }
+}

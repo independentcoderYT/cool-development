@@ -1,0 +1,62 @@
+/* rainbow flow border style */
+body {
+    background: #121212;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.animated-border-box {
+    position: relative;
+    padding: 30px;
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+/* BORDER ONLY ANIMATION */
+.animated-border-box::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    border-radius: 12px;
+    padding: 2px; /* This creates the border */
+    background: linear-gradient(
+        45deg,
+        #ff0000, #ff7300, #fffb00, #48ff00,
+        #00ffd5, #002bff, #7a00ff, #ff00c8
+    );
+    background-size: 400% 400%;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-flow 8s linear infinite;
+}
+
+.box-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.box-description {
+    color: #aaa;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@keyframes border-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
