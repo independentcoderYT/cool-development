@@ -1,28 +1,28 @@
-window.addEventListener("load", () => {
-  document.querySelector(".preloader").style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      // Reset all items
+      items.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.style.flex = "0.5";
+          otherItem.classList.remove("active");
+        }
+      });
+
+      // Expand hovered item
+      item.style.flex = "3";
+      item.classList.add("active");
+    });
+
+    // When mouse leaves gallery, reset all
+    const gallery = document.querySelector(".accordion-gallery");
+    gallery.addEventListener("mouseleave", () => {
+      items.forEach((item) => {
+        item.style.flex = "0.5";
+        item.classList.remove("active");
+      });
+    });
+  });
 });
-
-const slides = document.querySelectorAll(".hero-slide");
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 4000);
-
-const themeToggle = document.getElementById("themeToggle");
-const html = document.documentElement;
-
-const setTheme = (theme) => {
-  html.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-};
-
-themeToggle.addEventListener("change", () => {
-  setTheme(themeToggle.checked ? "light" : "dark");
-});
-
-const savedTheme = localStorage.getItem("theme") || "dark";
-setTheme(savedTheme);
-themeToggle.checked = savedTheme === "light";

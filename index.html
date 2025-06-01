@@ -2,166 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Web Developer Portfolio</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Link external CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming & Anime Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="preloader"><span></span></div>
-
-    <header>
-      <div class="logo">MyPortfolio</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <div class="theme-switch">
-          <label class="switch">
-            <input type="checkbox" id="themeToggle" />
-            <span class="slider" data-mode="☀️"></span>
-          </label>
-        </div>
-      </nav>
-    </header>
-
-    <div class="hero-slider">
-      <div
-        class="hero-slide active"
-        style="
-          background-image: url('https://cdn.pixabay.com/photo/2023/09/06/18/10/ai-generated-8237711_1280.jpg');
-        "
-      >
-        <div>
-          <h1>Hi, I'm Aman</h1>
-          <h2>Frontend Web Developer</h2>
-        </div>
+    <div class="gallery-container">
+      <div class="gallery-title">
+        <h1>Gaming & Anime Universe</h1>
+        <p>Explore India's most popular games and anime series</p>
       </div>
-      <div
-        class="hero-slide"
-        style="
-          background-image: url('https://cdn.pixabay.com/photo/2024/07/14/08/38/ai-generated-8893956_1280.jpg');
-        "
-      >
-        <div>
-          <h1>Crafting Beautiful Interfaces</h1>
-          <h2>Modern • Responsive • Interactive</h2>
+
+      <div class="accordion-gallery">
+        <!-- GTA 6 -->
+        <div class="accordion-item">
+          <img
+            src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_01_With_Logos_landscape.8596f77a.jpg&w=3560&q=75"
+            alt="GTA 6"
+            class="accordion-image"
+          />
+          <div class="image-caption">
+            <h3>GTA 6</h3>
+            <p>
+              The most anticipated game of 2025 returns to Vice City with
+              revolutionary gameplay
+            </p>
+          </div>
+        </div>
+
+        <!-- BGMI -->
+        <div class="accordion-item">
+          <img
+            src="https://wallpapercat.com/w/full/f/4/b/2856341-3840x2160-desktop-4k-pubg-mobile-wallpaper-photo.jpg"
+            alt="BGMI"
+            class="accordion-image"
+          />
+          <div class="image-caption">
+            <h3>Battlegrounds Mobile India</h3>
+            <p>
+              India's most popular battle royale game with over 100 million
+              registered users
+            </p>
+          </div>
+        </div>
+
+        <!-- Dragon Ball Z -->
+        <div class="accordion-item">
+          <img
+            src="https://wallpapercat.com/w/middle-retina/7/e/f/143566-3840x2160-desktop-4k-dragon-ball-z-wallpaper.jpg"
+            alt="Dragon Ball Z"
+            class="accordion-image"
+          />
+          <div class="image-caption">
+            <h3>Dragon Ball Z</h3>
+            <p>
+              Goku and friends defend Earth against powerful villains in this
+              legendary anime series
+            </p>
+          </div>
+        </div>
+
+        <!-- Free Fire -->
+        <div class="accordion-item">
+          <img
+            src="https://wallpapercat.com/w/middle-retina/5/6/5/1868750-3840x2160-desktop-4k-garena-free-fire-wallpaper.jpg"
+            alt="Free Fire"
+            class="accordion-image"
+          />
+          <div class="image-caption">
+            <h3>Free Fire</h3>
+            <p>
+              The battle royale sensation with over 50 million daily active
+              players in India
+            </p>
+          </div>
+        </div>
+
+        <!-- Naruto -->
+        <div class="accordion-item">
+          <img
+            src="https://wallpapercat.com/w/full/f/9/a/140979-1920x1080-desktop-1080p-naruto-wallpaper-image.jpg"
+            alt="Naruto"
+            class="accordion-image"
+          />
+          <div class="image-caption">
+            <h3>Naruto Shippuden</h3>
+            <p>
+              The story of Naruto Uzumaki, a young ninja who seeks recognition
+              from his peers
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
-    <section id="about" class="about">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I specialize in building fast, responsive, and beautiful websites using
-        modern technologies. I love turning complex problems into simple,
-        elegant solutions.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills">
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-          alt="HTML5"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-          alt="CSS3"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-          alt="JavaScript"
-          title="JavaScript"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          alt="React"
-          title="React"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-          alt="Node.js"
-          title="Node.js"
-        />
-        <img
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-          alt="Python"
-          title="Python"
-        />
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects">
-      <div class="card">
-        <img
-            src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png"
-          alt="Project 1"
-        />
-        <div class="card-content">
-            <h3>Modern Portfolio</h3>
-            <p>
-              A sleek and animated personal portfolio website built with HTML,
-              CSS, JS.
-            </p>
-            <a href="#">View Demo</a>
-        </div>
-      </div>
-      <div class="card">
-        <img
-            src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg"
-          alt="Project 2"
-        />
-        <div class="card-content">
-            <h3>React Admin Dashboard</h3>
-            <p>
-              Interactive dashboard with charts, stats, and dynamic themes built
-              in React.
-            </p>
-            <a href="#">View Demo</a>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_1280.jpg"
-            alt="Project 3"
-          />
-          <div class="card-content">
-            <h3>E-Commerce Site</h3>
-            <p>
-              Responsive shopping site with product filters, cart, and user auth
-              system.
-            </p>
-            <a href="#">View Demo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Aman Dev. All rights reserved.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
